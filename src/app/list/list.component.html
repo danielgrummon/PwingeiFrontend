@@ -1,0 +1,47 @@
+<div class='card'>
+  <div class='card-header'>
+    {{pageTitle}}
+  </div>
+  <div class='card-body'>
+    <div class='table-responsive'>
+      <table class='table' *ngIf='phenotypes && phenotypes.length'>
+        <thead>
+          <tr>
+            <th>
+            </th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>location</th>
+            <th>Collection Date</th>
+            <th>Available</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let phenotype of phenotypes'>
+            <td><!--[style.width.px] = "imagewidth" is an example of property binding-->
+              <img [src]='phenotype.imageUrl' [title]='phenotype.name' [style.width.px]='imageWidth' 
+                [style.margin.px]='imageMargin'>
+            </td>
+            <td>
+              <a [routerLink]="['/detail', phenotype.id]">
+                {{ phenotype.name }}
+              </a>
+            </td>
+            <td>{{phenotype.type}}</td>
+            <td>{{phenotype.location}}</td>
+            <td>{{ phenotype.date }}</td>
+            <td>NO</td>
+            <td>{{ phenotype.price | currency:'USD':'symbol':'1.2-2' }}</td>
+            <td>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class='card-footer'></div>
+</div>
+<div *ngIf='errorMessage' class='alert alert-danger'>
+  Error: {{ errorMessage }}
+</div>
