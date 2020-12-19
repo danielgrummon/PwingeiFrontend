@@ -23,19 +23,19 @@ export class DetailComponent implements OnInit {
     let id = +this.route.snapshot.paramMap.get('id');
     this.pageTitle += `: ${id}`;
     this.getPhenotypeList();
-    this.setPhenotypeById(id);
-  }
 
+    this.phenotype = this.phenotypes.find(function(phenotype, id) {
+      if(phenotype.id == id)
+        return true;
+    });
+
+  }
 
   getPhenotypeList() {
     this.pwingeiService.getPhenotypeList().subscribe({
       next: phenotypes => this.phenotypes = phenotypes,
       error: err => this.errorMessage = err
     });
-  }
-
-  setPhenotypeById(id){
-    this.phenotype = this.phenotypes.find(phenotype => phenotype.id === id);
   }
 
   onBack(): void {
