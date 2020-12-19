@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { IPhenotype } from './list.model';
+import { IPhenotype } from '../list/list.model';
 import { PwingeiService } from '../pwingei.service';
 
 @Component({
