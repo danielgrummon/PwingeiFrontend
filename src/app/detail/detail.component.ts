@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { IPhenotype } from '../list/list.model';
+import { IPhenotype } from './list.model';
+import { PwingeiService } from '../pwingei.service';
 
 @Component({
   selector: 'app-detail',
@@ -13,24 +14,28 @@ export class DetailComponent implements OnInit {
   pageTitle = 'PWingei';
   errorMessage = '';
   phenotype: IPhenotype;
+  phenotypes: IPhenotype[];
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor(private route: ActivatedRoute, private router: Router, private pwingeiService: PwingeiService) {
   }
 
   ngOnInit(): void {
     let id = +this.route.snapshot.paramMap.get('id');
     this.pageTitle += `: ${id}`;
-    this.phenotype = {
-      "id": 10,
-      "name": "Green Neon",
-      "type": "52",
-      "location": "Campoma Bridge",
-      "date": "2011",
-      "imageUrl": "/assets/images/campoma52.jpg",
-      "imageUrl2": "/assets/images/campoma52b.jpg",
-      "price": "50",
-      "description": "If you dont have one of these then you will just have to go home."
-    }
+    this.getPhenotypeList();
+    this.setPhenotypeById(id);
+  }
+
+
+  getPhenotypeList() {
+    this.pwingeiService.getPhenotypeList().subscribe({
+      next: phenotypes => this.phenotypes = phenotypes,
+      error: err => this.errorMessage = err
+    });
+  }
+
+  setPhenotypeById(id){
+    this.phenotype = this.phenotypes.find(phenotype => phenotype.id === id);
   }
 
   onBack(): void {
