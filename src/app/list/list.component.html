@@ -7,6 +7,7 @@
       <table class='table' *ngIf='phenotypes && phenotypes.length'>
         <thead>
           <tr>
+            <th></th>
             <th>Name</th>
             <th>Type</th>
             <th>location</th>
@@ -17,8 +18,9 @@
         </thead>
         <tbody>
           <tr *ngFor='let phenotype of phenotypes'>
-            <td><!--[style.width.px] = "imagewidth" is an example of property binding-->
-              <img [src]='phenotype.imageUrl' [title]='phenotype.name' [style.width.px]='imageWidth' 
+            <td>
+              <!--[style.width.px] = "imagewidth" is an example of property binding-->
+              <img [src]='phenotype.imageUrl' [title]='phenotype.name' [style.width.px]='imageWidth'
                 [style.margin.px]='imageMargin'>
             </td>
             <td>
@@ -29,7 +31,7 @@
             <td>{{phenotype.type}}</td>
             <td>{{phenotype.location}}</td>
             <td>{{ phenotype.date }}</td>
-            <td>NO</td>
+            <td>{{phenotype.available}}</td>
             <td>{{ phenotype.price | currency:'USD':'symbol':'1.2-2' }}</td>
           </tr>
         </tbody>
