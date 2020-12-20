@@ -8,17 +8,17 @@
             <tbody>
                 <tr>
                     <td>
-                        <app-stats [phenotype]="phenotype"></app-stats>
+                        <app-stats [phenotype]='phenotype'></app-stats>
                         
                     </td>
                     <td>
-                        <app-pictures [phenotype]="phenotype"></app-pictures>
+                        <app-pictures [imageLocation]='phenotype.imageUrl'></app-pictures>
                     </td>
                 </tr>
                 <tr>
-                    <td><app-text [phenotype]="phenotype"></app-text></td>
+                    <td><app-text [phenotype]='phenotype'></app-text></td>
                     <td>
-                        <app-pictures [phenotype]="phenotype"></app-pictures>
+                        <app-pictures [imageLocation]='phenotype.imageUrl2'></app-pictures>
                     </td>
                 </tr>
             </tbody>
