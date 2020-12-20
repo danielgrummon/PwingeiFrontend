@@ -7,5 +7,6 @@ export interface IPhenotype{
     imageUrl : string,
     imageUrl2 : string,
     price : string,
+    available : string,
     description : string
 }
