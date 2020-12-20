@@ -10,7 +10,7 @@ import { catchError, tap } from 'rxjs/operators';
 })
 export class PwingeiService {
 
-  private phenotypeListUrl = 'https://pwingei-backend.herokuapp.com/app/rest/wingei/pwingei';
+  private phenotypeListUrl = 'https://pwingei-backend.herokuapp.com/app/rest/wingei';
   constructor(private httpClient: HttpClient) { }
 
   options = {
@@ -22,12 +22,21 @@ export class PwingeiService {
 
   getPhenotypeList(): Observable<IPhenotype[]> {
     console.log("service retrieving list");
-    return this.httpClient.get<IPhenotype[]>(this.phenotypeListUrl)
+    return this.httpClient.get<IPhenotype[]>(this.phenotypeListUrl + '/findAll')
       .pipe(
         tap(data => console.log(JSON.stringify(data))),
         catchError(this.handleError)
       );
   }
+
+getPhenotypeById(id: number): Observable<IPhenotype> {
+  //template string uses `${id}`
+  return this.httpClient.get<IPhenotype>(this.phenotypeListUrl + `${id}`)
+  .pipe(
+    tap(data => console.log(JSON.stringify(data))),
+    catchError(this.handleError)
+  );
+}
 
   private handleError(err: HttpErrorResponse) {
     let errorMessage = '';
