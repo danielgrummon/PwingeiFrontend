@@ -8,14 +8,18 @@
             <tbody>
                 <tr>
                     <td>
-                        <app-text [phenotype]="phenotype"></app-text>
+                        <app-stats [phenotype]="phenotype"></app-stats>
+                        
                     </td>
                     <td>
                         <app-pictures [phenotype]="phenotype"></app-pictures>
                     </td>
                 </tr>
                 <tr>
-                    <app-stats [phenotype]="phenotype"></app-stats> 
+                    <td><app-text [phenotype]="phenotype"></app-text></td>
+                    <td>
+                        <app-pictures [phenotype]="phenotype"></app-pictures>
+                    </td>
                 </tr>
             </tbody>
         </table>
