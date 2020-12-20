@@ -4,8 +4,18 @@
     </div>
 
     <div class='card-body'>
-    <app-text [phenotype]="phenotype"></app-text>
-    <app-pictures [phenotype]="phenotype"></app-pictures>
+        <table class='table'>
+            <tbody>
+                <tr>
+                    <td>
+                        <app-text [phenotype]="phenotype"></app-text>
+                    </td>
+                    <td>
+                        <app-pictures [phenotype]="phenotype"></app-pictures>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <div class='card-footer'>
