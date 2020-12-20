@@ -9,6 +9,7 @@ import { PicturesComponent } from './pictures/pictures.component';
 import { TextComponent } from './text/text.component';
 import { DetailComponent } from './detail/detail.component';
 import { AppRoutingModule } from './app-routing.module';
+import { StatsComponent } from './stats/stats.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
     ListComponent,
     PicturesComponent,
     TextComponent,
-    DetailComponent
+    DetailComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,
