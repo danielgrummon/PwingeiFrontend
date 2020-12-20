@@ -14,8 +14,8 @@
                 <td>{{phenotype.location}}</td>
                 <td>{{phenotype.type}}</td>
                 <td>{{phenotype.date}}</td>
-                <td>NO</td>
-                <td>{{phenotype.price}}</td>
+                <td>{{phenotype.available}}</td>
+                <td>{{ phenotype.price | currency:'USD':'symbol':'1.2-2' }}</td>
             </tr>
         </tbody>
     </table>
