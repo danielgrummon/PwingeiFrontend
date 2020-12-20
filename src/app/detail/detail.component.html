@@ -2,21 +2,21 @@
     <div class='card-header'>
         {{pageTitle + ': ' + phenotype.name}}
     </div>
-
     <div class='card-body'>
         <table class='table'>
             <tbody>
                 <tr>
                     <td>
                         <app-stats [phenotype]='phenotype'></app-stats>
-                        
                     </td>
                     <td>
                         <app-pictures [imageLocation]='phenotype.imageUrl'></app-pictures>
                     </td>
                 </tr>
                 <tr>
-                    <td><app-text [phenotype]='phenotype'></app-text></td>
+                    <td>
+                        <app-text [phenotype]='phenotype'></app-text>
+                    </td>
                     <td>
                         <app-pictures [imageLocation]='phenotype.imageUrl2'></app-pictures>
                     </td>
@@ -24,7 +24,6 @@
             </tbody>
         </table>
     </div>
-
     <div class='card-footer'>
         <button class='btn btn-outline-secondary' (click)='onBack()' style='width:80px'>
             <i class='fa fa-chevron-left'></i> Back
