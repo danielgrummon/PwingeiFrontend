@@ -11,7 +11,7 @@ export class PicturesComponent implements OnInit {
   imageWidth = 500;
   imageMargin = 2;
 
-  @Input() phenotype: IPhenotype;
+  @Input() imageLocation: string;
   
   constructor() { }
 
