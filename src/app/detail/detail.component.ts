@@ -16,26 +16,15 @@ export class DetailComponent implements OnInit {
   phenotype: IPhenotype;
   phenotypes: IPhenotype[];
 
-  constructor(private route: ActivatedRoute, private router: Router, private pwingeiService: PwingeiService) {
-  }
+  constructor(private route: ActivatedRoute, private router: Router, private pwingeiService: PwingeiService) {}
 
   ngOnInit(): void {
     let id = +this.route.snapshot.paramMap.get('id');
-    this.pageTitle += `: ${id}`;
-    this.getPhenotypeList();
-
-    this.phenotype = this.phenotypes.find(function(phenotype, id) {
-      if(phenotype.id == id)
-        return true;
-    });
-
-  }
-
-  getPhenotypeList() {
-    this.pwingeiService.getPhenotypeList().subscribe({
-      next: phenotypes => this.phenotypes = phenotypes,
-      error: err => this.errorMessage = err
-    });
+    this.pwingeiService.getPhenotypeById(id)
+      .subscribe(
+        (data: IPhenotype) => this.phenotype = data,
+        (err: any) => console.log(err)
+      );
   }
 
   onBack(): void {
