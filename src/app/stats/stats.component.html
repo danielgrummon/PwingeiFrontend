@@ -1,16 +1,22 @@
-<table class='table'>
-    <tbody>
-        <tr>
-            <td>Common Name:</td>
-            <td>{{phenotype.name}}</td>
-            <td>Type Number:</td>
-            <td>{{phenotype.type}}</td>
-        </tr>
-        <tr>
-            <td>Collection Date:</td>
-            <td>{{phenotype.date}}</td>
-            <td>Collection Location:</td>
-            <td>{{phenotype.location}}</td>
-        </tr>
-    </tbody>
-</table>
+<div class='table-responsive'>
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>location</th>
+                <th>Type</th>
+                <th>Collected</th>
+                <th>Available</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{phenotype.location}}</td>
+                <td>{{phenotype.type}}</td>
+                <td>{{phenotype.date}}</td>
+                <td>NO</td>
+                <td>{{phenotype.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
