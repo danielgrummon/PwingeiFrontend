@@ -11,7 +11,7 @@ import { PwingeiService } from '../pwingei.service';
 })
 export class DetailComponent implements OnInit {
 
-  pageTitle = 'PWingei';
+  pageTitle = 'Common Name';
   errorMessage = '';
   phenotype: IPhenotype;
   phenotypes: IPhenotype[];
