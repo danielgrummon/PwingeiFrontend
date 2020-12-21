@@ -10,6 +10,8 @@ import { TextComponent } from './text/text.component';
 import { DetailComponent } from './detail/detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { StatsComponent } from './stats/stats.component';
+import { MinimalistComponent } from './minimalist/minimalist.component';
+import { HybridsComponent } from './hybrids/hybrids.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { StatsComponent } from './stats/stats.component';
     PicturesComponent,
     TextComponent,
     DetailComponent,
-    StatsComponent
+    StatsComponent,
+    MinimalistComponent,
+    HybridsComponent
   ],
   imports: [
     BrowserModule,
