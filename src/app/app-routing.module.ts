@@ -9,8 +9,6 @@ import { HybridsComponent } from './hybrids/hybrids.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'welcome' },
   { path: 'welcome', component: WelcomeComponent },
-  { path: 'list', component: ListComponent },
-  { path: 'detail/:id', component: DetailComponent },
   { path: 'minimalist', component: MinimalistComponent },
   { path: 'hybrids', component: HybridsComponent },
   { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
