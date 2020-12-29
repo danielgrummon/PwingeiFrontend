@@ -7,7 +7,7 @@ import { MinimalistComponent } from './minimalist/minimalist.component';
 import { HybridsComponent } from './hybrids/hybrids.component';
 import { ListModule } from './list/list.module';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from './shared/shared.module';
+//import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { SharedModule } from './shared/shared.module';
     HybridsComponent
   ],
   imports: [
-    SharedModule,
+   // SharedModule,
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
