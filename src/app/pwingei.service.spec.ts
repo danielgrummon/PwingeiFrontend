@@ -1,16 +1,19 @@
 import { TestBed } from '@angular/core/testing';
-
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { PwingeiService } from './pwingei.service';
 
+//outer describe
 describe('PwingeiService', () => {
-  // let service: PwingeiService;
+   let service: PwingeiService;
 
-  // beforeEach(() => {
+   beforeEach(() => {
+    // service = new PwingeiService();
+
   //   TestBed.configureTestingModule({});
   //   service = TestBed.inject(PwingeiService);
-  // });
+   });
 
-  // it('should be created', () => {
-  //   expect(service).toBeTruthy();
-  // });
+   it('Placeholder for a real unit test', () => {
+     expect(true).toBe(true);
+   });
 });
