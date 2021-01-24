@@ -20,4 +20,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   pageTitle = 'PWINGEI';
+  title = 'pwingeiFrontend';
 }
