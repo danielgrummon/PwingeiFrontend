@@ -27,6 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## Setup steps:
+
 ng new pwingeiFrontend
 
 ng g c welcome
@@ -64,25 +65,25 @@ ng g m list/list --flat -m app
 cli  generate  module  path/name  no folder  import module  module name
 
 ## Cloning steps
-   git clone https://github.com/danielgrummon/pwingeiFrontend.git
 
-   cd pwingeiFrontend/
+git clone https://github.com/danielgrummon/pwingeiFrontend.git
 
-   npm install
+cd pwingeiFrontend/
 
-   ng serve
+npm install
+
+ng serve
 
 ## Commit
-   git config --global user.email "you@example.com"
 
-   git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
 
-   git remote add origin https://github.com/danielgrummon/pwingeiFrontend
+git config --global user.name "Your Name"
 
-   git remote -v
+git remote add origin https://github.com/danielgrummon/pwingeiFrontend
 
-   git push -f
+git remote -v
 
-   git push origin main
+git push -f
 
-
+git push origin main
