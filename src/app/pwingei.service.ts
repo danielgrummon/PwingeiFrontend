@@ -29,14 +29,14 @@ export class PwingeiService {
       );
   }
 
-getPhenotypeById(id: number): Observable<IPhenotype> {
-  //template string uses `${id}`
-  return this.httpClient.get<IPhenotype>(this.phenotypeListUrl + `/${id}`)
-  .pipe(
-    tap(data => console.log(JSON.stringify(data))),
-    catchError(this.handleError)
-  );
-}
+  getPhenotypeById(id: number): Observable<IPhenotype> {
+    //template string uses `${id}`
+    return this.httpClient.get<IPhenotype>(this.phenotypeListUrl + `/${id}`)
+      .pipe(
+        tap(data => console.log(JSON.stringify(data))),
+        catchError(this.handleError)
+      );
+  }
 
   private handleError(err: HttpErrorResponse) {
     let errorMessage = '';
