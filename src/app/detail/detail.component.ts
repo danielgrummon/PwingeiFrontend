@@ -14,9 +14,8 @@ export class DetailComponent implements OnInit {
   pageTitle = 'Common Name';
   errorMessage = '';
   phenotype: IPhenotype;
-  phenotypes: IPhenotype[];
 
-  constructor(private route: ActivatedRoute, private router: Router, private pwingeiService: PwingeiService) {}
+  constructor(private route: ActivatedRoute, private router: Router, private pwingeiService: PwingeiService) { }
 
   ngOnInit(): void {
     let id = +this.route.snapshot.paramMap.get('id');
