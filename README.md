@@ -60,9 +60,10 @@ npm install font-awesome --save
 
 npm i express --save
 
-ng g m list/list --flat -m app
+## Convention
 
 cli  generate  module  path/name  no folder  import module  module name
+ng   g         m       list/list  --flat     -m             app
 
 ## Cloning steps
 
