@@ -48,3 +48,15 @@ npm i express --save
 
 ng   g         m       list/list  --flat     -m             app
 cli  generate  module  path/name  no folder  import module  module name
+
+Cloning steps
+   32  git clone https://github.com/danielgrummon/pwingeiFrontend.git
+   33   cd pwingeiFrontend/
+   34  npm install
+   36  ng serve
+
+Commit
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+
